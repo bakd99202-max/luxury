@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury - Admin</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">✨ LUXURY</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="admin.html" class="active">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="admin-page">
+        <div class="admin-layout">
+            <div class="admin-card">
+                <h2>Aggiungi Prodotto</h2>
+                <form id="productForm">
+                    <div class="form-group">
+                        <label for="title">Titolo</label>
+                        <input type="text" id="title" name="title" placeholder="Es. Collezione Fashion 2026" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Categoria</label>
+                        <select id="category" name="category" required>
+                            <option value="fashion">Fashion</option>
+                            <option value="design">Design</option>
+                            <option value="lifestyle">Lifestyle</option>
+                            <option value="premium">Premium</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="image">URL immagine</label>
+                        <input type="url" id="image" name="image" placeholder="https://..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Descrizione</label>
+                        <textarea id="description" name="description" placeholder="Breve descrizione del prodotto"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Salva Prodotto</button>
+                    <div id="statusMessage" class="status-message"></div>
+                </form>
+            </div>
+
+            <div class="admin-card">
+                <h2>Prodotti Salvati</h2>
+                <div id="adminProductList" class="admin-list"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
